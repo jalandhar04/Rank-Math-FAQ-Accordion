@@ -1,0 +1,56 @@
+/* FAQs Accordion CSS */
+#rank-math-faq {
+  background: #f0f4f8;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 1rem;
+}
+.rank-math-list-item {
+  background: var(--base-3);
+  padding: 15px;
+  box-shadow: 0 0 10px #d1d8dd, 0 0 40px #fff;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.rank-math-question {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #f0f4f8;
+  padding-bottom: 0.825rem;
+  margin-bottom: 0.825rem;
+  padding-right: 35px;
+  font-size: 1.6rem;
+  color: #795548 !important;
+}
+
+.rank-math-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.rank-math-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  width: 30px;
+  line-height: 30px;
+  background: #f0f4f8;
+  color: #ffb549;
+  border-radius: 50%;
+  text-align: center;
+  top: 15px;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: transform 0.2s ease-out;
+}
+
+.rank-math-question.active::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.rank-math-answer p:last-child {
+  margin-bottom: 0;
+}
